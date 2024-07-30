@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @Accessors(chain = true)
-public class TransactionClearingDetails {
+public class TransactionClearingDetail {
 
     /**
      * 持卡人
@@ -81,5 +81,5 @@ public class TransactionClearingDetails {
     /**
      * 卡账户余额
      */
-    private String cardAccountBalance;
+    private BigDecimal cardAccountBalance;
 }

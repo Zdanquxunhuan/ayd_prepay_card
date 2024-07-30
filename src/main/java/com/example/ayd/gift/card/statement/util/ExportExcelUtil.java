@@ -41,7 +41,10 @@ public abstract class ExportExcelUtil<T> {
 
     }
 
-    public abstract void init(List<T> datas, Map<String, String> exportParamsMap);
+    public void init(List<T> datas, Map<String, String> exportParamsMap){
+        this.datas = datas;
+        this.exportParamsMap = exportParamsMap;
+    }
 
     public abstract void handleDatas();
 

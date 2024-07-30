@@ -14,10 +14,6 @@ import java.math.BigDecimal;
 public class BalanceSummary {
 
     /**
-     * 卡号
-     */
-    private String cardNo;
-    /**
      * 卡状态
      */
     private String cardStatus;
@@ -31,4 +27,14 @@ public class BalanceSummary {
      * 已用金额
      */
     private BigDecimal usedAmount;
+
+    /**
+     * 可用金额
+     */
+    private BigDecimal availableAmount;
+
+    /**
+     * 卡号
+     */
+    private String cardNo;
 }
