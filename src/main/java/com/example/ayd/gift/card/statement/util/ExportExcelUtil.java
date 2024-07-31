@@ -31,7 +31,7 @@ public abstract class ExportExcelUtil<T> {
 
             handleDatas();
 
-            export(dataClass, datas, exportParamsMap);
+            export(dataClass, datas, this.exportParamsMap);
 
         } catch (Exception e) {
             log.error("导出文件失败:{}，异常导出过程:{}", e, dataClass);
@@ -41,11 +41,14 @@ public abstract class ExportExcelUtil<T> {
 
     }
 
-    public void init(List<T> datas, Map<String, String> exportParamsMap){
+    public void init(List<T> datas, Map<String, String> exportParamsMap) {
         this.datas = datas;
         this.exportParamsMap = exportParamsMap;
     }
 
+    /**
+     * 进行一些汇总运算与填充特殊数据
+     */
     public abstract void handleDatas();
 
     /**
@@ -70,7 +73,7 @@ public abstract class ExportExcelUtil<T> {
 
 
         try (ExcelWriter excelWriter = EasyExcel.write(fileName, dataClass).withTemplate(templateFileName).build()) {
-            // 这里注意 如果同一个sheet只要创建一次
+            // 这里注意 如果同一个sheet只要创建一次（模板下面的sheet名记得要填exportFileName的值，不然数据注入不进去）
             WriteSheet writeSheet = EasyExcel.writerSheet(exportFileName).build();
             FillConfig fillConfig = FillConfig.builder().forceNewRow(Boolean.TRUE).build();
 
