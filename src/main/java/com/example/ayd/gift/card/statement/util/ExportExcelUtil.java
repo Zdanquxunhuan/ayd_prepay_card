@@ -24,17 +24,17 @@ public abstract class ExportExcelUtil<T> {
 
     public Map<String, String> exportParamsMap;
 
-    public void doExport(Class<T> zlass, List<T> datas, Map<String, String> exportParamsMap) {
+    public void doExport(Class<T> dataClass, List<T> datas, Map<String, String> exportParamsMap) {
 
         try {
             init(datas, exportParamsMap);
 
             handleDatas();
 
-            export(zlass, datas, exportParamsMap);
+            export(dataClass, datas, exportParamsMap);
 
         } catch (Exception e) {
-            log.error("导出文件失败:{}，异常类为:{}", e, zlass.getName());
+            log.error("导出文件失败:{}，异常导出过程:{}", e, dataClass);
             throw new RuntimeException(e);
         }
 

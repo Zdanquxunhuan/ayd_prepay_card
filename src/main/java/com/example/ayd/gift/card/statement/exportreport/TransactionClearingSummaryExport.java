@@ -17,6 +17,7 @@ public class TransactionClearingSummaryExport extends ExportExcelUtil<Transactio
     @Value("${exportFileName.transactionClearingSummary}")
     private String exportFileName_transactionClearingSummary;
 
+    @Override
     public void handleDatas() {
         this.exportParamsMap.put("fileName", exportFileName_transactionClearingSummary);
         this.exportParamsMap.put("startDate","2024年07月25日");
