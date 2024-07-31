@@ -1,14 +1,11 @@
 package com.example.ayd.gift.card.statement.exportreport;
 
 import com.example.ayd.gift.card.statement.dto.gift.MonthlyStatement;
-import com.example.ayd.gift.card.statement.dto.gift.TransactionClearingDetail;
 import com.example.ayd.gift.card.statement.util.ExportExcelUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Objects;
 

@@ -1,7 +1,6 @@
 package com.example.ayd.gift.card.statement.exportreport;
 
 import com.example.ayd.gift.card.statement.dto.gift.TransactionClearingDetail;
-import com.example.ayd.gift.card.statement.dto.gift.TransactionClearingSummary;
 import com.example.ayd.gift.card.statement.util.ExportExcelUtil;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
