@@ -10,3 +10,4 @@ exportFileName:
   transactionClearingSummary: 预付卡交易清算汇总报表
   transactionClearingDetail: 预付卡交易清算明细表
   balanceSummary: 预付卡余额汇总表
+  monthlyStatement: 预付卡月度结算对账表
