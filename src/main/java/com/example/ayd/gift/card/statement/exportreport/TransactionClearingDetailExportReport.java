@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 @Service
-public class TransactionClearingDetailExport extends ExportExcelUtil<TransactionClearingDetail> {
+public class TransactionClearingDetailExportReport extends ExportExcelUtil<TransactionClearingDetail> {
 
     @Value("${exportFileName.transactionClearingDetail}")
     private String exportFileName_transactionClearingDetail;

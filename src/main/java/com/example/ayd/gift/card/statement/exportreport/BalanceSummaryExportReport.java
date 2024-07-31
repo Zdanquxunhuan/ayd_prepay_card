@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Objects;
 
 @Service
-public class BalanceSummaryExport extends ExportExcelUtil<BalanceSummary> {
+public class BalanceSummaryExportReport extends ExportExcelUtil<BalanceSummary> {
 
     @Value("${exportFileName.balanceSummary}")
     private String exportFileName_balanceSummary;

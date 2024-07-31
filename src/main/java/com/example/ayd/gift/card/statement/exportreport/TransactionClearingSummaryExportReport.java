@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
-public class TransactionClearingSummaryExport extends ExportExcelUtil<TransactionClearingSummary> {
+public class TransactionClearingSummaryExportReport extends ExportExcelUtil<TransactionClearingSummary> {
 
     @Value("${exportFileName.transactionClearingSummary}")
     private String exportFileName_transactionClearingSummary;
